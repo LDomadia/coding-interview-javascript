@@ -1,5 +1,5 @@
 function isUnique(s) {
-  var obj = {};
+  let obj = {};
   for (let i = 0; i < s.length; i++) {
     if (!obj[s.charAt(i)]) {
       obj[s.charAt(i)] = 1;

@@ -2,7 +2,7 @@ function checkPermutation(s1, s2) {
   if (s1.length != s2.length) {
     return false;
   }
-  var charObj = {};
+  let charObj = {};
   for (let i = 0; i < s1.length; i++) {
     if (!charObj[s1.charAt(i)]) {
       charObj[s1.charAt(i)] = 1;
