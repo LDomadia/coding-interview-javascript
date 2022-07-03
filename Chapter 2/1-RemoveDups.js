@@ -49,6 +49,26 @@ function removeDups(list) {
   }
 }
 
+function removeDupsWODS(list) {
+  let current = list.head;
+
+  while (current != null) {
+    let finder = current.next;
+    let previous = current;
+    while (finder != null) {
+      if (current.data == finder.data) {
+        previous.next = finder.next;
+        finder = previous.next;
+      }
+      else {
+        previous = finder;
+        finder = finder.next;
+      }
+    }
+    current = current.next;
+  }
+}
+
 let list = new LinkedList();
 list.appendToTail(1);
 list.appendToTail(2);
@@ -58,6 +78,10 @@ list.appendToTail(4);
 list.appendToTail(1);
 list.appendToTail(1);
 
+// console.log(list.toString());
+// removeDups(list);
+// console.log(list.toString());
+
 console.log(list.toString());
-removeDups(list);
+removeDupsWODS(list);
 console.log(list.toString());
