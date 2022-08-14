@@ -1,4 +1,5 @@
 function tripleStep(steps) {
+  // or use an array by doing "new Array(steps + 1).fill(null)"
   let memo = {};
   return tripleStepHelper(steps, memo);
 }
